@@ -42,15 +42,29 @@ from streamlit_option_menu import option_menu
 
 
 
+import psycopg2
 
+# Replace with your actual cluster credentials
+mydb = psycopg2.connect(
+    host="streamlit-db-11293.j77.aws-ap-south-1.cockroachlabs.cloud",
+    port=26257,
+    user="praveen1932",
+    password="YourClusterPasswordHere",
+    database="defaultdb",  # CockroachDB uses defaultdb by default unless you created a custom one
+    sslmode="verify-full",
+    sslrootcert="./certs/root.crt"  # Path to downloaded CA cert
+)
 
-mydb = mysql.connector.connect(
-        host="127.0.0.1",
-        user="root",
-        password="Praveen@1932000",
-        auth_plugin="mysql_native_password"
-    )
 cursor = mydb.cursor()
+
+
+#mydb = mysql.connector.connect(
+#        host="127.0.0.1",
+ #       user="root",
+ #       password="Praveen@1932000",
+ #       auth_plugin="mysql_native_password"
+ #   )
+#cursor = mydb.cursor()
 
 cursor.execute("use phonepe_pulse")
 # Clear again before next query
