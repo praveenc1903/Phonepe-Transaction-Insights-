@@ -2,3 +2,8 @@ streamlit
 pandas
 plotly
 requests
+streamlit==1.45.0
+pandas==2.2.3
+plotly==6.0.1
+mysql-connector-python==9.3.0
+streamlit-option-menu==0.4.0
