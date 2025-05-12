@@ -10,7 +10,7 @@ import requests
 #import psycopg2
 import plotly.express as px
 import plotly.graph_objects as go
-from streamlit_option_menu import option_menu
+#from streamlit_option_menu import option_menu
 import mysql.connector
 import streamlit as st
 from PIL import Image
